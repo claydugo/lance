@@ -1900,6 +1900,7 @@ mod tests {
     }
 
     #[test]
+    #[cfg(feature = "zstd")]
     fn test_compression_level_honored_for_large_per_value() {
         let mut params = CompressionParams::new();
         params.columns.insert(
